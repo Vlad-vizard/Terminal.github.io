@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Retro Gaming';
+	src: url('../fonts/retro_gaming.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/retro_gaming.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/retro_gaming.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/retro_gaming.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/retro_gaming.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/retro_gaming.svg#retro_gaming') format('svg'); /* Chrome < 4, Legacy iOS */
+}

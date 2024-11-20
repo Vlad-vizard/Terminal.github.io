@@ -1,0 +1,139 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@font-face {
+    font-family: 'PS';
+    src: url('../Терминал/PS/fonts/pixeloid_sans.eot'); /* IE 9 Compatibility Mode */
+    src: url('../Терминал/PS/fonts/pixeloid_sans.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../Терминал/PS/fonts/pixeloid_sans.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../Терминал/PS/fonts/pixeloid_sans.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../Терминал/PS/fonts/pixeloid_sans.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../Терминал/PS/fonts/pixeloid_sans.svg#pixeloid_sans') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+body {
+    background-color: black;
+}
+.imgz {
+    position: absolute;
+    bottom: 40px;
+    left: 350px;
+    opacity: 0.5;
+    z-index: 1;
+}
+h1 {
+    color: #1E90FF;
+    font-family: "PS";
+    text-shadow: 1px 1px 1px #0000FF;
+    z-index: 2;
+}
+h2 {
+    position: relative;
+    color: #1E90FF;
+    font-family: "PS";
+    text-shadow: 1px 1px 1px #0000FF;
+    z-index: 2;
+}
+h3 {
+    color: #1E90FF;
+    font-family: "PS";
+    text-shadow: 1px 1px 1px #0000FF;
+}
+li {
+    position: relative;
+    color: #1E90FF;
+    font-family: "PS";
+    text-shadow: 1px 1px 1px #0000FF;
+    z-index: 2;
+}
+
+button::before {
+    position: relative;
+    font-family: "PS";
+    content: attr(text);
+    color: #1E90FF;
+    text-shadow: 1px 1px 1px #0000FF;
+    font-size: 20px;
+    z-index: 2;
+}
+button:hover::before {
+    position: relative;
+    font-family: "PS";
+    content: attr(hover-text);
+    color: #1E90FF;
+    text-shadow: 1px 1px 1px #0000FF;
+    z-index: 2;
+}
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: black;
+    z-index: 1001;
+}
+
+.preloader__image {
+    position: relative;
+    top: 10%;
+    left: 13%;
+    width: 1024px;
+    height: 576px;
+    background: url('загрузка.gif') no-repeat 100%;
+}
+
+.loaded_hiding .preloader {
+    transition: 600s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -20.5px;
+    background-color: black;
+    min-width: 60px;
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover button {
+    background-color: black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown button {
+    background-color: black;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    border: none;
+    border-color: black;
+    cursor: pointer;
+}
+.tbl {
+    display: flex;
+    justify-content: flex-end;
+    width: 1450px;
+}

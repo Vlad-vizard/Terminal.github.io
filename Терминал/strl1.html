@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>strl.html</title>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <div class="tbl">
+        <table>
+            <tr>
+                <th>
+                    <div class="dropdown">
+                        <button><h3 style="color: #006400; text-shadow: 1px 1px 1px #32CD32;">\/</h3></button>
+                        <div class="dropdown-content">
+                            <a href="options.html"><img src="шестерёнка.png" width="20" /></a>
+                            <a href="start.html"><img src="Кнопка(прст).png" width="20" /></a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <h1 id="heading">ДОБРО ПОЖАЛОВАТЬ</h1>
+    <div class="anm">
+        <div><form><button text="ВРАГИ ФЕДЕРАЦИИ" hover-text="ВРАГИ ФЕДЕРАЦИИ<" style="background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px;"></button></form></div>
+        <br />
+        <div><form><button text="ВООРУЖЕНИЕ" hover-text="ВООРУЖЕНИЕ<" style="background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px;"></button></form></div>
+        <br />
+        <div><form><button text="СНАРЯЖЕНИЕ" hover-text="СНАРЯЖЕНИЕ<" style="background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px;"></button></form></div>
+        <br />
+        <div><form><button text="КОРАБЛЬ" hover-text="КОРАБЛЬ<" style="background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px;"></button></form></div>
+    </div>
+    <img class="imgz" src="черепок.png" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 3000);
+        };
+        const heading = document.getElementById('heading');
+        const speed = 200
+        function typeText(element, text, speed, callback) {
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                } else {
+                    if (callback) callback();
+                }
+            }
+            element.innerHTML = '';
+            type();
+        };
+        const headingText = heading.textContent;
+        const delayBeforaphText = 4000;
+        setTimeout(() => {
+            typeText(heading, headingText, 250);
+        }, 3000);
+    </script>
+</body>
+</html>
