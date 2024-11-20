@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>options.html</title>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <div class="tbl">
+        <table>
+            <tr>
+                <th>
+                    <div class="dropdown">
+                        <button><h3>\/</h3></button>
+                        <div class="dropdown-content">
+                            <a href="strl1.html"><img id="hs" src="дом.png" width="20" /></a>
+                            <a href="start.html"><img id="bt" src="Кнопка(прст).png" width="20" /></a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <h1 id="text">НАСТРОЙКИ</h1>
+    <h2>ЦВЕТ ТЕМЫ</h2>
+    <button id="clrG" text="ЗЕЛЁНЫЙ" hover-text="ЗЕЛЁНЫЙ<" style=" background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px; "></button>
+    <br />
+    <button id="clrR" text="КРАСНЫЙ" hover-text="КРАСНЫЙ<" style=" background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px; "></button>
+    <br />
+    <button id="clrO" text="ОРАНЖЕВЫЙ" hover-text="ОРАНЖЕВЫЙ<" style=" background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px; "></button>
+    <br />
+    <button id="clrB" text="СИНИЙ" hover-text="СИНИЙ<" style=" background-color: rgba(255, 255, 255, 0); border: none; outline: none; margin: 10px; "></button>
+    <h2 id="text">САЙТ РАЗРАБОТАН:</h2>
+    <ul>
+        <li>САЛИКОВ ВЛАДИСЛАВ ИГОРЕВИЧ - КОДЕР;</li>
+        <li>REWUM - АНОНИМНЫЙ ДИЗАЙНЕР.</li>
+    </ul>
+    <h2>ССЫЛКА НА ТГ ДИЗАЙНЕРА:</h2>
+    <img id="qr" src="QR.png" width="200" />
+    <img id="chrp" class="imgz" src="черепок.png" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 3000);
+        };
+        const para = document.getElementById("text");
+        const clrG = document.getElementById("clrG");
+        const clrR = document.getElementById("clrR");
+        const clrO = document.getElementById("clrO");
+        const clrB = document.getElementById("clrB");
+        const qr = document.getElementById("qr");
+        const chrp = document.getElementById("chrp");
+        const bt = document.getElementById("bt");
+        const hs = document.getElementById("hs");
+        clrG.addEventListener("click", colorChangeG);
+        clrR.addEventListener("click", colorChangeR);
+        clrO.addEventListener("click", colorChangeO);
+        clrB.addEventListener("click", colorChangeB);
+        function colorChangeG() {
+            document.querySelector("link").href = "style2.css";
+            qr.src = "QR.png";
+            chrp.src = "черепок.png";
+            bt.src = "Кнопка(прст).png";
+            hs.src = "дом.png";
+        };
+        function colorChangeR() {
+            document.querySelector("link").href = "style2(red).css";
+            qr.src = "QRR.jpg";
+            chrp.src = "черепокR.jpg";
+            bt.src = "Кнопка(прст)R.jpg";
+            hs.src = "домR.jpg";
+        };
+        function colorChangeO() {
+            document.querySelector("link").href = "style2(orange).css";
+            qr.src = "QRO.jpg";
+            chrp.src = "черепокO.jpg";
+            bt.src = "Кнопка(прст)O.jpg";
+            hs.src = "домO.jpg";
+        };
+        function colorChangeB() {
+            document.querySelector("link").href = "style2(blue).css";
+            qr.src = "QRB.jpg";
+            chrp.src = "черепокB.jpg";
+            bt.src = "Кнопка(прст)B.jpg";
+            hs.src = "домB.jpg";
+        };
+    </script>
+</body>
+</html>
